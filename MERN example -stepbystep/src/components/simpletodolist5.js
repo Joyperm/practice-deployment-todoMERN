@@ -30,7 +30,7 @@ export default function SimpleTodosList() {
   const [todos, setTodoList] = useState([]);
   useEffect(() => {
     axios
-      .get('http://localhost:5000/activity/')
+      .get('https://practice-deployment-todomern.onrender.com/activity/')
       .then((response) => {
         setTodoList(response.data);
       })
@@ -41,7 +41,7 @@ export default function SimpleTodosList() {
 
   const deleteTodo = (id) => {
     axios
-      .delete('http://localhost:5000/activity/delete/' + id)
+      .delete('https://practice-deployment-todomern.onrender.com/activity/delete/' + id)
       .then((response) => {
         console.log(response.data);
       });

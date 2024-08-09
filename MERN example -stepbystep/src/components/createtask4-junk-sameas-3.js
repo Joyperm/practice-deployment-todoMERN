@@ -10,7 +10,7 @@ export default function CreateTask() {
     const activityvar = { activity: activity };
 
     axios
-      .post('http://localhost:5000/activity/add', activityvar)
+      .post('https://practice-deployment-todomern.onrender.com/activity/add', activityvar)
       .then((res) => {
         window.location = '/';
       });
